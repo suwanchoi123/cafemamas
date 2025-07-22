@@ -1,0 +1,110 @@
+/* header */
+header {
+  width: 100%;
+  background-color: #000;
+}
+.headerbg {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 80px;
+  box-sizing: border-box;
+  position: relative;
+}
+header h1 {
+  margin-bottom: 30px;
+  margin-top: 25px;
+  width: 58px;
+}
+.menubutton img {
+  height: 40px;
+  cursor: pointer;
+}
+.menutext {
+  color: #fff;
+  font-size: 15px;
+}
+.menutext:hover {
+  color: #ccc;
+  font-size: 15px;
+}
+.headernav {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  display: none;
+  padding: 20px 15px;
+  z-index: 1000;
+}
+.headernav.show {
+  display: block;
+}
+.headernav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.headernav a:hover {
+  color: #ccc;
+}
+.headernav a.active {
+  font-weight: 400;
+}
+
+
+/* header - 태블릿 */
+@media (max-width: 1024px) {
+  .headerbg {
+    height: 90px;
+  }
+
+  header h1 {
+    width: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .menubutton img {
+    height: 46px;
+  }
+
+  .menutext {
+    font-size: 18px;
+  }
+
+  .headernav a {
+    font-size: 16px;
+  }
+}
+
+/* header - 모바일 */
+@media (max-width: 768px) {
+  .headerbg {
+    height: 100px;
+  }
+
+  header h1 {
+    width: 80px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .menubutton img {
+    height: 40px;
+  }
+
+  .menutext {
+    font-size: 20px;
+  }
+
+  .headernav a {
+    font-size: 18px;
+  }
+}

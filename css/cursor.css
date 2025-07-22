@@ -1,0 +1,7 @@
+.cursor {
+  z-index: 9999;
+  position: absolute;
+  width: 100px;
+  pointer-events: none;
+  transition: transform 0.1s linear;
+}

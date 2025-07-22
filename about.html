@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마마스 홈페이지</title>
+    <link href="css/aboutstyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/aboutscript.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/indexscript.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/headerfooter.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <!-- 헤더 영역 -->
+    <div id="header"></div>
+    <section class="slide"><!--이미지 섹션 작업 부분-->
+        <img src="images/Brand_image.png" alt="상단 이미지" width="100%">
+        <p class = "textslide">
+            Better Morning<br>
+            Better Coffee
+        </p>
+    </section>
+    <div class="contents"><!--콘텐츠 작업 부분-->
+      <h1>Our Story</h1>
+      <div id="oneOur">
+        <img src ="images/image_01.png" alt="주방 이미지">
+        <span></span>
+        <div class = "box ">
+            <h2>마마스의 시작은 작은 주방에서부터</h2>
+            <p>
+                마마스는 단순한 카페가 아닌,<br>
+                ‘매일 먹고 싶은 한 끼’를 만드는 공간에서 시작되었습니다.<br>
+                초기에는 직원들의 아침을 준비하던 사내 주방에서,<br>
+                남은 재료로 만든 샌드위치 한 입이 “이 거 어디서 샀어요?”라는 말을 들으면서부터였죠.<br><br>
+                그 따뜻한 반응에 힘입어,<br>
+                우리는 정직한 재료와 손맛으로 누구에게나 편안한 식사를 만들겠다는 다짐을 하게 되었습니다.<br>
+                직접 만든 치즈, 꼬들하게 구운 파니니, 맑고 상큼한 생과일 주스<br>
+                모두 마마스의 작은 주방에서 탄생한 진심입니다
+            </p>
+        </div>
+      </div>
+
+      <div id="twoOur">
+        <span></span>
+        <div class = "box">
+            <h2>오늘의 정직함이, 내일의 마마스를 만듭니다</h2>
+            <p>
+                마마스는 지금도 매일 새벽 3시에 주방의 불을 켭니다.<br />
+                보글보글 스프 냄비, 손으로 쥐어 짠 주스, 정갈하게 씻은 청포도<br />
+                소란스럽고 따뜻한 풍경은 오늘도 그대로입니다.<br /><br />
+                우리는 요란한 기술보다,<br />
+                신선한 재료와 정직한 조리법이 더 많은 것을 만든다고 믿습니다.<br />
+                앞으로도 마마스는 소박하지만 진심 어린 식사를 통해<br>
+                누군가의 아침, 점심, 그리고 하루의 기분을 바꾸는 일을 계속할 것입니다.<br>
+                마마스는 늘, 당신의 식탁을 위해 준비되어 있습니다.
+            </p>
+        </div>
+        <img src ="images/image_02.png" alt="식탁" />
+      </div>
+      <script>
+        $(function(){
+          let winWid = $(window).width();
+          if ( winWid > 767){
+              $('#oneOur, #twoOur').css({opacity : '0'});
+            $('#oneOur').animate({opacity:'1'},1000, function(){
+              $('#twoOur').animate({opacity:'1'},500);
+            });
+            $('#oneOur .box, #twoOur .box').css({opacity : '0.5'});
+            $('#oneOur .box').animate({left:0, opacity:1},1000, function(){
+              $('#twoOur .box').animate({left:0, opacity:1},1000);
+            });
+          }
+        });
+      </script>
+
+      <div id="Identity">
+        <div class="sectio one">
+          <h1>MAMAS Identity</h1>
+          <p>정직하게, 손으로, 매일 아침부터</p>
+        </div>
+
+        <div class="sectio two">
+          <h2>Handcrafted</h2>
+          <p>
+            매일 새벽, 마마스 주방은 손으로 시작됩니다.<br />
+            치즈를 만들고, 파니니를 굽고, 스프를 끓이는 모든 과정은<br />
+            정해진 공식보다 ‘사람의 감각’으로 완성됩니다.
+          </p>
+          <span></span>
+        </div>
+        
+        <div class="sectio three">
+          <span></span>
+          <h2>Fresh Process</h2>
+          <p>
+            마마스는 ‘오늘 만든 건 오늘 소진’이 원칙입니다.<br />
+            갓 손질한 재료로 짜낸 주스, 정성껏 채운 샐러드는<br />
+            냉동 없이, 신선함 그대로 손님에게 전해집니다.
+          </p>
+        </div>
+
+        <div class="sectio four">
+          <h2>Honest Flavor</h2>
+          <p>
+            마마스의 메뉴는 자극적인 맛보다 매일 먹고 싶은맛을<br />
+            지향합니다. 소스 하나까지 손수 만드는 이유는,<br />
+            한 입 한 입에 진심을 담기 위함입니다.
+          </p>
+          <span></span>
+        </div>
+        <div class="sectio five">
+          <div id="Finish">
+            <p>마마스의 정성은 오늘도 이어집니다</p><br /><br />
+            <h2>Freshly Made, Honestly Served</h2>
+            <img src="images/coffee-icon-black.png" alt="화이트 로고" />
+          </div>
+
+          <div class="imgSlide">
+            <ul>
+              <li> <img src="images/insta_imge_01.jpg" alt="음식사진1"></li>
+              <li><img src="images/insta_imge_02.jpg" alt="음식사진2"></li>
+              <li><img src="images/insta_imge_03.jpg" alt="음식사진3"></li>
+              <li><img src="images/insta_imge_04.jpg" alt="음식사진4"></li>
+              <li><img src="images/insta_imge_05.jpg" alt="음식사진5"></li>
+              <li> <img src="images/insta_imge_01.jpg" alt="음식사진1"></li>
+              <li> <img src="images/insta_imge_02.jpg" alt="음식사진2"></li>
+              <li> <img src="images/insta_imge_03.jpg" alt="음식사진3"></li>
+              <li> <img src="images/insta_imge_04.jpg" alt="음식사진4"></li>
+              <li> <img src="images/insta_imge_05.jpg" alt="음식사진5"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(function(){
+          let winWid = $(window).width();
+          if (winWid > 1199){
+            let hei = $(window).height();
+            $(window).resize(function(){
+              $('#Identity .sectio').css({
+                'height':hei,
+              });
+            });
+            $(window).trigger('resize');
+            $('.sectio').mousewheel(function(e,delta){
+              let startIdx = $(this).index();
+              let endIdx = $('.sectio').last().index();
+              console.log(endIdx);
+              if(delta>0){
+                if(startIdx == 0){
+                  return;
+                }else{
+                  aa = $(this).offset().top-hei;
+                  $('html').stop().animate({scrollTop:aa},500);
+                }
+              }else{
+                if(startIdx==endIdx){
+                  return;
+                }else{
+                  aa = $(this).offset().top+hei;
+                  $('html').stop().animate({scrollTop:aa},500);
+                }
+              }
+            });
+          }
+        });
+      </script>
+      <script>
+        $(function(){
+          let winWid = $(window).width();
+          setInterval (function(){
+            $('.imgSlide li').each(function(){
+              let leftN = parseInt($(this).css('left'));
+              let leftPos = leftN-440;
+              $(this).animate({left : leftPos}, 1000, function(){
+                if(leftPos <= -440){
+                  $(this).css('left', 3960);
+                }
+              });
+            })
+          },2000) // 움직이는 속도
+        });
+      </script>
+    </div>
+    <!-- 푸터 영역 -->
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

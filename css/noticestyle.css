@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{max-width: 100%; vertical-align: top;}
+table{width: 100%; border-collapse: collapse;}
+button{cursor: pointer;}
+body{background: #fff; color: #333; font-family: 'Pretendard', sans-serif;}
+
+.wrap{background-color: #000;}
+
+/* header */
+header {width: 100%; background-color: #000;}
+.headerbg {width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; height: 80px; box-sizing: border-box; position: relative;}
+header h1{margin-bottom: 30px; margin-top: 25px; width: 58px;}
+.menubutton img {height: 40px; cursor: pointer;}
+.menutext {color: #fff; font-size: 15px;}
+.headernav {position: absolute; top: 80px; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.8); text-align: center; display: none; padding: 20px 15px; z-index: 1000;}
+.headernav.show {display: block;}
+.headernav a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: bold; font-size: 14px;}
+.headernav a:hover{color: #ccc}
+.headernav a.active {font-weight: 400;}
+
+
+/* slide */
+.slide {
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+.slideimg {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.slideimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slidetext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+}
+.slidetext h2 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+
+/* contents */
+.contents {
+  background: 
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('../images/bg.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  padding: 100px 20px;
+  padding-bottom: 300px;
+  color: #fff;
+}
+.contents .inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* notice info */
+.notice-info {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* search box 스타일 통합 */
+.search-box {
+  display: flex;
+  align-items: center;
+ width: 100%;
+  max-width: 300px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 0 12px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* 드롭다운 */
+.search-box select {
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  padding: 0 4px;
+  height: 100%;
+  line-height: 55px; 
+  color: #333;
+  outline: none;
+}
+
+/* 입력창 */
+.search-box input {
+  flex: 1;
+  max-width: 170px;
+  border: none;
+  font-size: 15px;
+  background: none;
+  outline: none;
+  padding: 0;
+}
+
+/* 검색 버튼 */
+.search-box button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+.search-box button img {
+  width: 21px;
+  height: 21px;
+}
+
+
+/* accordion */
+.accordion-list {
+  border-top: 1px solid white;
+}
+.accordion-item {
+  border-bottom: 1px solid white;
+  border-left: none;
+  border-right: none;
+}
+.accordion-header {
+  all: unset;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  min-height: 50px;
+  padding: 20px 0px 20px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  background: transparent;
+  z-index: 1;
+  gap: 10px; /* 간격 설정 */
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* 아주 은은한 효과 */
+}
+
+.accordion-header .num {
+  width: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+}
+.accordion-header .title {
+  flex: 1;
+  margin-left: 10px;
+}
+.accordion-header .icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+/* 아이템이 열렸을 때 회전 */
+.accordion-item.open .accordion-header .icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion-body {
+  display: none;
+  padding: 20px 10px;
+  background-color:transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.accordion-item.open .accordion-body {
+  display: block;
+  max-height: 1000px;
+}
+.date {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+.accordion-body img {
+    display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  border-radius: 6px;
+}
+
+/* footer */
+footer{width:100%; background-color:#000; padding-bottom: 74px;}
+.footerbg{max-width:1920px; margin:0 auto; background-color:#000; padding:20px 0;}
+.footerinner{max-width:1280px; margin:0 auto; color:#fff; font-size:14px;line-height:1.6; position:relative;}
+.footerlinks{margin-top: 40px; margin-bottom:20px;}
+.footerlinks a{color:#fff; text-decoration:none; margin-right:14px;font-weight:600;}
+.footerlinks a:hover{color: #ccc;}
+.footersub{margin-bottom:20px; }
+.footersub a{color:#fff; text-decoration:none; margin-right:10px; font-weight:500;}
+.footersub a:hover{color: #ccc;}
+.footersub2{margin-bottom:40px; font-weight:500;}
+.footerinfo{padding-bottom:6px; font-weight:lighter;}
+.footercopy{margin-top:15px; font-size:12px; font-weight:lighter;}
+.footersns{position:absolute; top:0; right:0;}
+.footersns img{width:24px; height:24px;}
+.footersns a:hover img{opacity: 80%;}
+
+/*모바일*/
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+
+  .slideimg {
+    height: 220px;
+  }
+
+  .slidetext h2 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .notice-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .search-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 44px;
+    padding: 0 10px;
+    border-radius: 22px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-sizing: border-box;
+  }
+
+  .search-box select {
+    min-width: 60px;
+    font-size: 13px;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  .search-box input {
+    flex: 1;
+    border: none;
+    font-size: 14px;
+    background: none;
+    outline: none;
+    padding: 0;
+  }
+
+  .search-box button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .search-box button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .accordion-header {
+    font-size: 14px;
+    padding: 16px 0 16px 8px;
+  }
+
+  .accordion-header .icon {
+    width: 20px;
+    height: 20px;
+    right: 10px;
+  }
+
+  .accordion-body {
+    font-size: 13px;
+    padding: 16px 8px;
+  }
+
+  .accordion-body img {
+    max-width: 90%;
+  }
+
+  .footerinner {
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .footersns {
+    top: 10px;
+    right: 12px;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마마스 홈페이지</title>
+    <link href="css/noticestyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/noticescript.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/headerfooter.js"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+<body>
+  <div class="wrap">
+    <!-- 헤더 영역 -->
+    <div id="header"></div>
+    <section class="slide">
+      <div class="slideimg">
+        <img src="images/notice_bg.png" alt="공지사항 배경">
+        <div class="slidetext">
+          <h2 id="noticeTitle">공지사항</h2>
+        </div>
+      </div>
+    </section>
+    <div class="contents">
+      <div class="inner">
+        <div class="notice-info">
+          총 5개의 게시물이 있습니다.
+          <div class="search-box">
+            <select>
+              <option>제목</option>
+              <option>내용</option>
+            </select>
+            <input type="text">
+            <button><img src="images/Search.png" alt="검색"></button>
+          </div>
+        </div>
+        <ul class="accordion-list">
+          <li class="accordion-item">
+            <button class="accordion-header" data-index="5" type="button">
+              <span class="num">5</span>
+              <span class="title">마마스's 모닝메뉴 가격 인하 SPECIAL EVENT.</span>
+              <img class="icon" src="images/caratdown.png" alt="열기">
+            </button>
+            <div class="accordion-body">
+              <p class="date">2025-02-01</p>
+              <img src="images/n5.png" alt="모닝메뉴 가격 인하 안내 이미지">
+            </div>
+          </li>
+          <li class="accordion-item">
+            <button class="accordion-header" data-index="4" type="button">
+              <span class="num">4</span>
+              <span class="title">2025 설 연휴 영업 안내입니다.</span>
+              <img class="icon" src="images/caratdown.png" alt="열기">
+            </button>
+            <div class="accordion-body">
+              <p class="date">2025-01-01</p>
+              <img src="images/n4.png" alt="2025년 설 연휴 운영 일정 이미지">
+            </div>
+          </li>
+          <li class="accordion-item">
+            <button class="accordion-header" data-index="3" type="button">
+              <span class="num">3</span>
+              <span class="title">MAMAS EVENT</span>
+              <img class="icon" src="images/caratdown.png" alt="열기">
+            </button>
+            <div class="accordion-body">
+              <p class="date">2024-09-06</p>
+              <img src="images/n3.png" alt="마마스 이벤트 이미지">
+            </div>
+          </li>
+          <li class="accordion-item">
+            <button class="accordion-header" data-index="2" type="button">
+              <span class="num">2</span>
+              <span class="title">시즌 메뉴 '자두 주스' 출시!</span>
+              <img class="icon" src="images/caratdown.png" alt="열기">
+            </button>
+            <div class="accordion-body">
+              <p class="date">2024-06-21</p>
+              <img src="images/n2.png" alt="자두 주스 출시 이미지">
+            </div>
+          </li>
+          <li class="accordion-item">
+            <button class="accordion-header" data-index="1" type="button">
+              <span class="num">1</span>
+              <span class="title">시즌 메뉴 '수박 주스' 출시!</span>
+              <img class="icon" src="images/caratdown.png" alt="열기">
+            </button>
+            <div class="accordion-body">
+              <p class="date">2024-05-11</p>
+              <img src="images/n1.png" alt="수박 주스 출시 안내 이미지">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 푸터 영역 -->
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

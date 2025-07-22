@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마마스 홈페이지</title>
+    <link href="css/menustyle.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/menuscript.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/headerfooter.js"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- 헤더 영역 -->
+    <div id="header"></div>
+    <section class="slide">
+    <div class="slideimg">
+        <img src="images/menu_bg.png" alt="메뉴소개 배경화면">
+        <div class="slidetext"><p>메뉴 소개</p></div>
+    </div>
+    </section>
+
+    <div class="contents">
+        
+      
+        <!-- 카테고리 탭 버튼 -->
+      <div class="menu-tabs">
+        <button class="tab active" data-category="sandwich">샌드위치</button>
+        <button class="tab" data-category="side">사이드</button>
+        <button class="tab" data-category="coffee">커피</button>
+        <button class="tab" data-category="beverage">음료</button>
+      </div>
+      
+      <!-- 샌드위치 시작 -->
+      <div class="menu-grid" data-category="sandwich">
+          <div class="menu-card" data-id="menu1">
+            <img src="images/mamassand.png" alt="마마스 샌드위치">
+            <h3>마마스 샌드위치</h3>
+            <p>Mama's Sandwich</p>
+          </div>
+
+          <div class="menu-card" data-id="menu2">
+            <img src="images/sand.png" alt="루콜라 햄 치즈">
+            <h3>루콜라 햄 치즈</h3>
+            <p>Lucola ham cheese</p>
+          </div>
+
+          <div class="menu-card" data-id="menu3">
+            <img src="images/club_sand.png" alt="클럽 샌드위치">
+            <h3>클럽 샌드위치</h3>
+            <p>Club Sandwich</p>
+          </div>
+
+          <div class="menu-card" data-id="menu4">
+            <img src="images/double_panini.png" alt="더블치즈 파니니">
+            <h3>더블치즈 파니니</h3>
+            <p>Double cheese panini</p>
+          </div>
+
+          <div class="menu-card" data-id="menu5">
+            <img src="images/mushroom_panini.png" alt="머쉬룸 파니니">
+            <h3>머쉬룸 파니니</h3>
+            <p>Mushroom Panini</p>
+          </div>
+
+          <div class="menu-card" data-id="menu6">
+            <img src="images/tomato_panini.png" alt="모짜렐라 토마토 파니니">
+            <h3>모짜렐라 토마토 파니니</h3>
+            <p>mozzarella tomato panini</p>
+          </div>
+
+          <div class="menu-card" data-id="menu7">
+            <img src="images/meat_panini.png" alt="소고기 가지 파니니">
+            <h3>소고기 가지 파니니</h3>
+            <p>Beef eggplant panini</p>
+          </div>
+        </div> <!--샌드위치/ 파니니 끝-->
+
+        <!-- 사이드 시작 -->
+      <div class="menu-grid" data-category="side" style="display: none;">
+          <div class="menu-card" data-id="side1">
+            <img src="images/mamas_salad.png" alt="마마스 샐러드">
+            <h3>마마스 샐러드</h3>
+            <p>Mamas salad</p>
+          </div>
+
+          <div class="menu-card" data-id="side2">
+            <img src="images/pumpkin_salad.png" alt="단호박 샐러드">
+            <h3>단호박 샐러드</h3>
+            <p>sweet pumpkin salad</p>
+          </div>
+
+          <div class="menu-card" data-id="side3">
+            <img src="images/ricotta_salad.png" alt="라코타치즈 샐러드">
+            <h3>라코타치즈 샐러드</h3>
+            <p>Lakota Cheese Salad</p>
+          </div>
+
+          <div class="menu-card" data-id="side4">
+            <img src="images/potato_soup.png" alt="감자 스프">
+            <h3>감자 스프</h3>
+            <p>Potato Soup</p>
+          </div>
+
+          <div class="menu-card" data-id="side5">
+            <img src="images/pumpkin_soup.png" alt="단호박 스프">
+            <h3>단호박 스프</h3>
+            <p>sweet pumpkin soup</p>
+          </div>
+
+          <div class="menu-card" data-id="side6">
+            <img src="images/broccoli_soup.png" alt="컬리 스프">
+            <h3>컬리 스프</h3>
+            <p>Curly Soup</p>
+          </div>
+        </div> <!-- 사이드 끝-->
+
+        <!-- 커피 시작 -->
+      <div class="menu-grid" data-category="coffee" style="display: none;">
+          <div class="menu-card" data-id="coffee1">
+            <img src="images/hot_coffee.png" alt="아메리카노">
+            <h3>아메리카노</h3>
+            <p>Americano</p>
+          </div>
+
+          <div class="menu-card" data-id="coffee2">
+            <img src="images/icecoffee.png" alt="아이스 아메리카노">
+            <h3>아이스 아메리카노</h3>
+            <p>ice Americano</p>
+          </div>
+
+          <div class="menu-card" data-id="coffee3">
+            <img src="images/hot_latte.png" alt="카페 라떼">
+            <h3>카페 라떼</h3>
+            <p>Café latte</p>
+          </div>
+
+          <div class="menu-card" data-id="coffee4">
+            <img src="images/icelatte.png" alt="아이스 카페 라떼">
+            <h3>아이스 카페 라떼</h3>
+            <p>Iced Café Latte</p>
+          </div>
+        </div> <!-- 커피 끝-->
+         <!-- 음료 시작 -->
+      <div class="menu-grid" data-category="beverage" style="display: none;">
+          <div class="menu-card" data-id="beverage1">
+            <img src="images/Kalebananajuice.png" alt="꿀 케일 바나나 주스">
+            <h3>꿀 케일 바나나 주스</h3>
+            <p>Honey kale banana juice</p>
+          </div>
+          <div class="menu-card" data-id="beverage2">
+            <img src="images/nutjuice.png" alt="꿀 호두 바나나 주스">
+            <h3>꿀 호두 바나나 주스</h3>
+            <p>Honey walnut banana juice</p>
+          </div>
+          <div class="menu-card" data-id="beverage3">
+            <img src="images/grapejuice.png" alt="케일 청포도 주스">
+            <h3>케일 청포도 주스</h3>
+            <p>kale green grape juice</p>
+          </div>
+          <div class="menu-card" data-id="beverage4">
+            <img src="images/lemon_tea.png" alt="레몬티">
+            <h3>레몬티</h3>
+            <p>lemon tea</p>
+          </div>
+          <div class="menu-card" data-id="beverage5">
+            <img src="images/milk_tea.png" alt="밀크티">
+            <h3>밀크티</h3>
+            <p>milk tea</p>
+          </div>
+          <div class="menu-card" data-id="beverage6">
+            <img src="images/smith_tea.png" alt="스미스티">
+            <h3>스미스티</h3>
+            <p>Smith tea</p>
+          </div>
+        </div> <!-- 음료 끝-->
+      </div> <!--CONTENTS 끝-->
+          <!-- 팝업 -->
+          <div class="menu-popup" id="menuPopup" style="display: none;">
+            <div class="popup-container">
+              <div class="popup-inner">
+                <!-- 이미지 -->
+                <div class="popup-img">
+                  <img src="" alt="팝업 이미지" id="popupImage">
+                </div>
+                <!-- 텍스트 영역 -->
+                <div class="popup-info">
+                  <h3 class="popup-title" id="popupTitle">메뉴 이름</h3>
+                  <p class="popup-subtitle" id="popupSubtitle">영문 이름</p>
+                  <hr class="popup-divider">
+                  <p class="popup-desc" id="popupDesc">설명 텍스트</p>
+
+                  <!-- 아이콘 리스트 -->
+                  <div class="popup-icons" id="popupIcons">
+                  </div>
+                  <div class="popup-btn-wrap">
+                <button class="popup-close">닫기</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!-- 푸터 영역 -->
+    <div id="footer"></div>
+  </div>
+</body>
+</html>
