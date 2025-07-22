@@ -6,7 +6,7 @@ a{text-decoration: none; color: inherit;}
 img{max-width: 100%; vertical-align: top;}
 table{width: 100%; border-collapse: collapse;}
 button{cursor: pointer;}
-body{background: #fff; color: #333; font-family: 'Pretendard', sans-serif;}
+body{background: #fff; color: #000; font-family: 'Pretendard', sans-serif;}
 
 .wrap{background-color: #000;}
 
@@ -212,7 +212,7 @@ header h1{margin-bottom: 30px; margin-top: 25px; width: 58px;}
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #4a4a4a;
+  color: #000000;
 }
 .popup-subtitle {
   font-size: 16px;
@@ -262,7 +262,7 @@ header h1{margin-bottom: 30px; margin-top: 25px; width: 58px;}
 
 .icon-label {
   font-size: 15px;
-  color: #b2b2b2;
+  color: #1c1c1c;
   margin-top: 4px;
   text-align: center;
 }

@@ -10,8 +10,8 @@ $(function(){
   $(`.tab[data-category="${categoryFromUrl}"]`).addClass('active');
 
   // 메뉴 열기
-  $('#menuButton').on('click', function(){
-    $('#headerNav').toggleClass('show');
+  $('#menuButton').on('click', '#menuButton', function () {
+    $('#headerNav').stop().slideToggle(300);
   });
 
   // 카테고리 탭 클릭 시

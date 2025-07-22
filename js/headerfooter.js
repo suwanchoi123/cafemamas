@@ -1,7 +1,5 @@
 $(function () {
-  // 헤더 로드
-  $('#header').load('../components/header.html', function () {
-    // 현재 페이지 경로 얻기
+  // 현재 페이지 경로 얻기
     const path = window.location.pathname.split('/').pop();
 
     // 기본값은 index.html
@@ -22,32 +20,32 @@ $(function () {
     $(document).on('click', '#menuButton', function () {
       $('#headerNav').stop().slideToggle(300);
     });
+
+  // 이용약관/개인정보처리방침 팝업
+  function openModal(url) {
+    $.get(url, function (data) {
+      $('#modalBody').html(data);
+      $('#modal').fadeIn(150);
+    });
+  }
+
+  $('#openPopup').on('click', function (e) {
+    e.preventDefault();
+    openModal('terms.html');
   });
 
-  // 푸터 로드 + 팝업
-  $('#footer').load('../components/footer.html', function () {
-    $(document).on('click', '#openPopup', function (e) {
-      e.preventDefault();
-      $('#popup').css('display', 'flex');
-    });
+  $('#openPrivacy').on('click', function (e) {
+    e.preventDefault();
+    openModal('privacy.html');
+  });
 
-    $(document).on('click', '#closeBtn', function () {
-      $('#popup').css('display', 'none');
-    });
+  $('#modalClose').on('click', function () {
+    $('#modal').fadeOut();
+  });
 
-    $(document).on('click', '#openPrivacy', function (e) {
-      e.preventDefault();
-      $('#privacyPopup').css('display', 'flex');
-    });
-
-    $(document).on('click', '#closePrivacy', function () {
-      $('#privacyPopup').css('display', 'none');
-    });
-
-    $(document).on('click', '.popup-overlay', function (e) {
-      if ($(e.target).hasClass('popup-overlay')) {
-        $(this).css('display', 'none');
-      }
-    });
+  $('#modal').on('click', function (e) {
+    if ($(e.target).is('#modal')) {
+      $('#modal').fadeOut();
+    }
   });
 });

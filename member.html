@@ -18,14 +18,65 @@
 </head>
 <body>
   <div class="wrap">
-    <!-- 헤더 영역 -->
-    <div id="header"></div>
+    <div class="top">
+      <header>
+      <div class="headerbg">
+        <h1><a href="index.html"><img src="images/white_logo.png" alt="마마스로고"></a></h1>
+        <div class="menubutton" id="menuButton">
+          <img src="images/menu.png" alt="메뉴 버튼">
+        </div>
+        <div class="menutext">
+          <a href="member.html">가맹 문의</a>
+        </div>
+        <nav class="headernav" id="headerNav">
+          <a href="index.html" class="active">HOME</a>
+          <a href="about.html">BRAND</a>
+          <a href="menu.html">MENU</a>
+          <a href="notice.html">NOTICE</a>
+          </nav>
+        </div>
+      </header>
+    </div>
     <section class="slide">
       <!--이미지 섹션 작업 부분-->
       <img src="images/text.png" alt="가맹문의 준비중">
     </section>
-    <!-- 푸터 영역 -->
-    <div id="footer"></div>
+    <footer>
+      <div class="footerbg">
+        <div class="footerinner">
+          <div class="footerlinks">
+            <a href="index.html">HOME</a>
+            <a href="about.html">BRAND</a>
+            <a href="menu.html">MENU</a>
+            <a href="notice.html">NOTICE</a>
+          </div>
+          <div class="footersub">
+            <a href="#" id="openPopup">이용약관</a>
+            <a href="#" id="openPrivacy">개인정보처리방침</a>
+          </div>
+          <div class="footersub2">
+            Cafe Mamas&nbsp;&nbsp;|&nbsp;&nbsp;카페마마스
+          </div>
+          <div class="footerinfo">
+            상호명: (주)마마스푸드&nbsp;&nbsp;|&nbsp;&nbsp;대표: 주혜윤&nbsp;&nbsp;|&nbsp;&nbsp;사업자등록번호: 105-87-46831&nbsp;&nbsp;|&nbsp;&nbsp;대표전화: 02-712-1250
+          </div>
+          <div class="footerinfo">
+            개인정보관리책임: 주혜윤&nbsp;&nbsp;|&nbsp;&nbsp;서울 용산구 원효로97길 15 원효루미니 205호
+          </div>
+          <div class="footercopy">
+            COPYRIGHT (c) 2025 cafe mamas. All rights reserved.
+          </div>
+          <div class="footersns">
+            <a href="https://www.instagram.com/cafemamas.kr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="images/Instagram.png" alt="인스타그램"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="modal" class="popup-overlay" style="display:none;">
+  <div class="popup-content">
+    <img src="images/close.png" alt="닫기" class="close-btn" id="modalClose">
+    <div id="modalBody"></div>
   </div>
 </body>
 </html>

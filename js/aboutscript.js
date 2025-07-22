@@ -1,5 +1,6 @@
-$(function(){
-  $('#menuButton').on('click', function(){
-    $('#headerNav').toggleClass('show');
+$(function () {
+  // 메뉴 열기
+  $('#menuButton').on('click', '#menuButton', function () {
+    $('#headerNav').stop().slideToggle(300);
   });
 });
